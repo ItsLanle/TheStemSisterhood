@@ -12,6 +12,11 @@ html {
      background-color: bisque;
 }
 
+/* Push content below the fixed navbar */
+body {
+    padding-top: 130px;
+}
+
 /*** body ***
   
   Purpose:
@@ -133,7 +138,7 @@ button {
     text-align: center;
     border: 2px solid green;
     background-color: tan;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 1s ease, opacity 1s ease;
 }
 .header {
     background-color: tan;
@@ -251,12 +256,13 @@ button {
     z-index: 1000; /* Ensures the navbar is on top of other elements */
     list-style-type: none;
     overflow: hidden;
-    position:fixed;
-    top: 10;
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100%;
-    margin-bottom: 20px;
-    
+    margin: 0;
+    padding: 0;
+    background-color: darkgreen;
 }
 
 .navbar ul li {

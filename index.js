@@ -171,4 +171,27 @@ const reduceMotion = () => {
 motion.addEventListener('click', reduceMotion);
 
 
+/*** Scroll Reveal Animations ***
+
+  Purpose:
+  - Fade elements in as they scroll into view
+  - Fade elements out as they scroll out of view
+
+***/
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (document.body.classList.contains("reduce")) return;
+
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+    } else {
+      entry.target.classList.remove("active");
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll(".revealable").forEach(el => observer.observe(el));
+
+
 /*** Success Modal [PLACEHOLDER] [ADDED IN UNIT 9] ***/
