@@ -1,0 +1,507 @@
+/*** You will not need this file until Unit 3 ***/
+/*** VSCodeEDU preview fix 
+
+  Purpose:
+  - Fix VSCodeEDU issue that causes a white border to show around
+    the preview window
+
+  When To Modify:
+  - If you change the background color of your webpage, you may need to update this rule too.
+***/
+html {
+     background-color: bisque;
+}
+
+/*** body ***
+  
+  Purpose:
+  - Add style rules for the body of your webpage
+  - This is useful if you want a rule to apply to EVERYTHING on your page
+    - (Tip: You can always override these rules later in the stylesheet)
+
+  When To Modify:
+  - [ ] Project 3 (REQUIRED FEATURE) 
+  - [ ] Any time after
+
+body {
+    /* Add a background color or image */
+    /*background-color: var(--bg-color); /* see bottom of file for color variables */
+
+    /* Customize the default size, color, and font for text*/
+    /*font-size: 16px;
+    color: var(--text-color);
+    font-family: Tahoma, sans-serif; /* This tells the browser: "Try to use `Tahoma`, and if you can't find it, use any sans-serif font." */
+
+    /* Put space around the edges of the webpage */
+   /* margin: 50px;
+***/
+
+/*** Text ***
+  
+  Purpose: 
+  - Add style rules for headings (h1-6),
+    paragraphs (p), links (a), and buttons
+
+  When To Modify:
+  - [X] Project 3 (REQUIRED FEATURE) 
+  - [ ] Any time after
+***/
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, serif;
+    color: #2e7d32;
+}
+h2 {
+    color: rgb(255,150,200);
+}
+h3 {
+    font-style:oblique;
+    font-size: 26px;
+}
+
+p {
+   /* background-color: burlywood; */
+    color: black;
+    font-size: 20px;  
+}
+#logo {
+    color: red;
+}
+.events {
+    background-color: rgba(0, 128, 0, 0.308);
+}
+/* Default link state */
+a:link {
+    color: black;        
+    text-decoration: none;
+}
+
+/* Visited link */
+a:visited {
+    color: pink;       
+}
+
+/* Hover state (mouse over link) */
+a:hover {
+    color: blue;       
+    text-decoration: underline;
+}
+
+/* Active state (when clicking) */
+a:active {
+    color: orange;     
+}
+
+/* a,
+a * {
+    
+} */
+
+button {
+    /* Example Style, replace with your own! */
+    background-color: green;    /* button color */
+    color: white;               /* text color */
+    border: none;               /* hides the default border */
+    padding: 5px 12px;          /* space between button's text and edge */
+    border-radius: 5px;         /* curved edges instead of square */
+    cursor: pointer;            /* makes the cursor change when over button */
+}
+
+/* button:hover {
+    /* Make the button look different when the user hovers over it */
+/*}
+
+/*** header ***
+  
+  Purpose:
+  - Add style rules for your website's header section
+
+  When To Modify:
+  - [X] Project 3 (REQUIRED FEATURE) 
+  - [ ] Project 4 (REQUIRED FEATURE) 
+  - [ ] Any time after
+***/
+
+
+/* Header container */
+.header-container { /* Example A: This styles elements with class="header" */
+    display: flex;
+    flex-direction:row;
+    padding-top: 10px;
+    margin-bottom: 30px;
+    margin-top: 3px;
+    text-align: center;
+    border: 2px solid green;
+    background-color: tan;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.header {
+    background-color: tan;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hide-header {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+.header-item:nth-of-type(1) {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.header-right:nth-of-type(2) {
+    display: flex;
+    gap: 10px;
+}
+
+#header-img {
+    width: 80px;
+    height: auto;
+    max-width: 100px;
+}
+
+/* .header-button {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    margin: 20px;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+} */
+
+/* Left side of header */
+#header-left {
+    width: 60%;
+    margin: auto;
+}
+
+/* Right side of header */
+#header-right {
+    width: 40%;
+    margin: auto;
+}
+
+/* Header image */
+#header-img {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 50%;
+    max-width: 150px;
+}
+
+/* Header buttons */
+.header-button {
+    background-color: green;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+
+    padding: 20px 15px;
+    margin: 5px;
+    border: 2px solid darkgreen;
+
+    cursor: pointer;
+}
+
+
+/*** footer ***
+  
+  Purpose:
+  - Add style rules for your website's footer section
+
+  When To Modify:
+  - [ ] Project 3 (STRETCH FEATURE) 
+  - [ ] Any time after
+***/
+
+.footer { /* Example B: This styles elements with class="footer" */
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: pink;
+    text-align: center;
+    padding: 5px;
+}
+
+.footer a {
+    color: black;
+    text-decoration: dotted;
+    margin: 0 10px;
+
+}
+.footer a hover{
+    text-decoration: underline;
+}
+
+/*** Navigation bar (navbar) ***
+  
+  Purpose:
+  - Add style rules for your website's navbar
+
+  When To Modify:
+  - [ ] Project 4 (REQUIRED FEATURE) 
+  - [ ] Any time after
+***/
+
+.navbar ul {
+    z-index: 1000; /* Ensures the navbar is on top of other elements */
+    list-style-type: none;
+    overflow: hidden;
+    position:fixed;
+    top: 10;
+    left: 0;
+    width: 100%;
+    margin-bottom: 20px;
+    
+}
+
+.navbar ul li {
+    float: left;
+    margin: 10px;
+}
+ 
+.navbar ul li a {
+    display: block;
+    text-decoration: double;
+    background-color: darkgreen;
+    text-align: center;
+    padding: 10px;
+
+    
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+    color: white;
+
+
+    
+}
+
+
+/*** About Section ***
+  
+  Purpose:
+  - Add style rules for your website's About section
+
+  When To Modify:
+  - [ ] Project 3 (OPTIONAL)
+  - [ ] Project 4 (STRETCH FEATURE) 
+  - [ ] Any time after
+***/
+
+
+/*** Schedule Section ***
+  
+  Purpose:
+  - Add style rules for your website's Schedule section
+
+  When To Modify:
+  - [ ] Project 3 (OPTIONAL)
+  - [ ] Project 4 (STRETCH FEATURE) 
+  - [ ] Any time after
+***/
+
+
+/*** Links Section ***
+  
+  Purpose:
+  - Add style rules for your website's Links section
+
+  When To Modify:
+  - [ ] Project 3 (OPTIONAL)
+  - [ ] Project 4 (STRETCH FEATURE) 
+  - [ ] Any time after
+***/
+
+
+/*** RSVP Section ***
+  
+  Purpose:
+  - Add style rules for your website's RSVP form
+
+  When To Modify:
+  - [ ] Project 6 (REQUIRED FEATURE)
+  - [ ] Project 7 (REQUIRED FEATURE)
+  - [ ] Any time after
+***/
+
+.rsvp-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    padding-bottom: 50px;
+
+}
+
+.rsvp-para {
+    width: 55%;
+    padding-right: 10px;
+}
+
+.rsvp-participants {
+    width: 45%;
+    padding-right: 10px;
+}
+
+input {
+    display: block;
+    margin: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+/* Add other rsvp-related selectors here */
+
+.error {
+  border: 2px solid #ff4d4d;
+  background-color: #ffe6e6;
+  outline: none;
+}
+
+
+/*** Animations  ***
+  
+  Purpose:
+  - Add style rules to enable scroll animations for your website
+
+  When To Modify:
+  - [ ] Project 8 (REQUIRED FEATURE)
+  - [ ] Any time after
+***/
+
+.revealable {
+  --reveal-distance: 0px; /* CSS Variable */
+
+  scroll-margin-top: 150px;
+  opacity: 0;
+  transition: all 2s ease;
+  position: relative;
+  transform: translateY(var(--reveal-distance));
+}
+
+.active {
+  scroll-margin-top: 0;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+.reduce .revealable {
+  opacity: 1 !important;
+  transform: none !important;
+}
+/*** Success Modal [PLACEHOLDER] [ADDED IN UNIT 9] ***/
+
+/* Default dark mode style */
+/* Dark mode: apply only when .dark-mode is on body */
+body.dark-mode {
+    background-color: darkgreen; /* your current dark mode bg */
+    color: white;               /* default text color in dark mode */
+}
+
+/* Headings inside dark mode */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    /* Keep your current heading colors */
+    color: magenta;
+}
+
+/* Paragraphs inside dark mode */
+body.dark-mode p {
+    color: bisque; /* your current paragraph color in dark mode */
+}
+
+/* Links inside dark mode */
+body.dark-mode a:link {
+    color: lightblue; /* optional: keeps links visible */
+}
+
+body.dark-mode a:visited {
+    color: pink; /* preserve visited link color */
+}
+
+/* Inputs and buttons inside dark mode */
+body.dark-mode input,
+body.dark-mode button {
+    background-color: #333; /* dark input fields/buttons */
+    color: white;           /* text in input/buttons */
+    border: 1px solid white;
+}
+
+/* Header container inside dark mode */
+body.dark-mode .header-container {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    margin-bottom: 30px;
+    margin-top: 3px;
+    text-align: center;
+    border: 2px solid darkgreen; /* can change if you want a dark mode border */
+    background-color: darkgreen; /* dark mode background for header */
+}
+
+/* Header itself inside dark mode */
+body.dark-mode .header {
+    background-color: darkgreen; /* matches container or slightly different */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Header text inside dark mode */
+body.dark-mode .header-item:nth-of-type(1) {
+    color: lightpink; /* or any color you want for dark mode */
+}
+
+/* Example: toggle button text color */
+#toggle {
+    color: pink;
+}
+
+#reduce {
+    color: pink
+}
+
+/*** Custom Colors (OPTIONAL) ***
+  
+  Purpose:
+  - Use CSS variables to define custom colors for your website
+  - To get you started, we've provided the color scheme used in our example site.
+  - To reference a color variable in your css, use var(--variable-name) in place of a color value
+
+  When To Modify:
+  - [ ] Any time (OPTIONAL)
+***/
+
+:root {
+    /* Light Mode */
+    --bg-color: #a6a0cf;
+    --text-color: #231942;
+
+    /* Dark Mode */
+    --bg-color-dark-mode: #3e3377;
+    --text-color-dark-mode: #fff;
+
+    /* Accent Colors */
+    --accent-color-light: #d2cff5;
+    --accent-color-medium: #684fb5;
+    --accent-color-dark: #482f95;
+    --accent-color-darkest: #231942;
+    --accent-color-green: #28eb76;
+
+    /* Error Colors */
+    --error-color: #f8bbd0;
+    --error-color-border: #e63946;
+}
+
