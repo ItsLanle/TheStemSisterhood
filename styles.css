@@ -395,6 +395,7 @@ input {
 .reduce .revealable {
   opacity: 1 !important;
   transform: none !important;
+  transition: none !important;
 }
 /*** Success Modal [PLACEHOLDER] [ADDED IN UNIT 9] ***/
 

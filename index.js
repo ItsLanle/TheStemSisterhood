@@ -158,6 +158,13 @@ let motion = document.getElementById("reduce");
 // Toggle reduce motion class
 const reduceMotion = () => {
   document.body.classList.toggle("reduce");
+
+  // If reduce motion is now ON, immediately show all revealable elements without animation
+  if (document.body.classList.contains("reduce")) {
+    document.querySelectorAll(".revealable").forEach(el => {
+      el.classList.add("active");
+    });
+  }
 }
 
 // Attach event listener
