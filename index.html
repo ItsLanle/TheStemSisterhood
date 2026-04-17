@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <link rel="stylesheet" href="styles.css">
+        
+
+        <!-- head
+
+        Purpose:
+        - Title used here shows up in the browser tab
+        - Link to the favicon (small image that appears in the browser tab)
+        - Link to the CSS file (used to style the webpage)
+
+        When To Modify:
+        - [ ] Project 2 (REQUIRED FEATURE) 
+        - [ ] Project 2 (STRETCH FEATURE) (favicon)
+        - [ ] Any time after
+        -->
+        <title> 🌱The STEM Sisterhood</title>
+        <link rel="icon" type="image/png" href="img/logoup.png">
+        <style>
+            /* Style rules go here. */
+            body {
+                background-color:bisque;
+                font-size: 20px;
+            }
+            ul {
+                color: white;
+            }
+        </style>
+    </head>
+    
+    <body>
+
+<!-- navbar
+
+Purpose:
+- Navigation bar that allows users to jump to different sections of the webpage
+- Also holds buttons for user settings (dark mode, reduce motion)
+
+When To Modify:
+- [ ] Project 4 (REQUIRED FEATURE)
+- [ ] Project 5 (REQUIRED FEATURE) 
+- [ ] Project 8 (STRETCH FEATURE) 
+- [ ] Any time between / after
+-->
+<div class="navbar">
+    <ul>
+    <li><a href="#home">Home</a></li>  
+    <li><a href="#about">About</a></li>
+    <li><a href="#schedule">Schedule</a></li>
+    <li><a href="#links">Links</a></li>
+    <li><a id="toggle">Toggle Dark Mode</a></li>
+    <li><a id="reduce">Reduce Motion</a></li>
+    </ul>
+</div>
+
+
+        <!-- headings
+
+        Purpose:
+        - Main header section of the webpage
+        - Contains the title, subtitle, image, and key buttons for the webpage
+
+        When To Modify:
+        - [ ] Project 2 (REQUIRED FEATURE) 
+        - [ ] Project 3 (REQUIRED FEATURE) 
+        - [ ] Project 4 (REQUIRED FEATURE) 
+        - [ ] Any time after
+        -->
+      <div class="header-container">
+        <div class="header-item">
+        <img id="header-img" src="./img/logo.png" alt="STEM Sisterhood logo">
+        <h1>🌱 The STEM Sisterhood Game Night </h1>
+        <h3>Stories, Support, and Sisterhood in STEM</h3>
+    </div>
+
+    <div id="header-item">
+        <button class="header-button" type="button">Sign In/Up</button>
+        <button class="header-button" type="button">Register</button>
+    </div>
+</div>
+
+    
+        
+        <!-- about
+
+        Purpose:
+        - Section for general info about the event
+        - Contains a video, description, and key points about the event
+
+        When To Modify:
+        - [ ] Project 2 (REQUIRED FEATURE) 
+        - [ ] Project 2 (STRETCH FEATURE) 
+        - [ ] Project 4 (STRETCH FEATURE) 
+        - [ ] Any time between / after
+        --> 
+        <h2>About The Event<div id="about"> </div></h2>
+        <p>The STEM Sisterhood is a digital space created to uplift, inform, and connect women navigating careers in science, technology, engineering, and math.
+             This event and platform highlight personal stories, shared resources, and practical strategies for thriving in tech-related fields. <p>It is designed 
+             especially for women and girls interested in STEM, including students, aspiring professionals, and allies seeking community and support. 
+             Through reflection, storytelling, and engagement, The STEM Sisterhood fosters empowerment and representation in STEM spaces.
+            </p>
+
+
+
+        <!-- <h3>What to Expect</h3>
+        <h4>Tag Line</h4>
+        <ul>
+            <li> <b>Bullet 1:</b> <i>Description</i></li>
+            <li> <b>Bullet 2:</b> <i>Description</i></li>
+            <li> <b>Bullet 3:</b> <i>Description</i></li>
+        </ul> -->
+
+        <!-- schedule
+
+        Purpose:
+        - Section for specific info about the event's schedule
+        - Contains images and descriptions of each activity
+
+        When To Modify:
+        - [ ] Project 2 (REQUIRED FEATURE) 
+        - [ ] Project 4 (STRETCH FEATURE) 
+        - [ ] Any time between / after
+        --> 
+        <h2>Event Schedule <div id="schedule"> </div></h2>
+
+        <img alt="The STEM Sisterhood logo" src="./img/logo.png" width="500"/>
+        <p id="logo">This is the first logo that I designed for this website on January 25th, 2026 :)</p>
+        <h3 class="events"> Get to Know us!</h3>
+        <p>Quick intro by the host, overview of The STEM Sisterhood, and an icebreaker question like “What’s your favorite STEM fact or gadget?” <p>Short discussion on a STEM topic: e.g., “Quick Tips for Navigating Internships” or “Overcoming Imposter Syndrome.” Keep it interactive with polls or Q&A.</p>
+
+         <img alt="Virtual game night photo" src="./img/gamenight.png"/>
+         <h3 class="events">Games! Games! Games!</h3>
+         <p>Where coding minds meet playful vibes <br> Main event: online trivia, Pictionary, Kahoot, or a STEM-themed challenge game. Rotate teams or keep it casual for solo play.</p>
+         <p> Be sure to register for our upcoming STEM Sisterhood Game Night!! We cant wait to see you there!</p>
+        
+        
+        <!-- <img alt="Image description" src="./img/example.png"/>
+        <h3 class="events">Event Activity 2</h3>
+        <p>Description of event activity.</p>
+
+        <img alt="Image description" src="./img/example.png"/>
+        <h3 class="events">Event Activity 2</h3>
+        <p>Description of event activity.</p> -->
+
+    <!-- rsvp
+
+    Purpose:
+    - Section for users to sign up for the event
+    - Contains a form for users to input their information, 
+    and a list of other users who have signed up
+
+    When To Modify:
+    - [ ] Project 6 (REQUIRED FEATURE) 
+    - [ ] Project 6 (STRETCH FEATURE) 
+    - [ ] Any time after
+    --> 
+    <div id="rsvp">
+        <h2>RSVP</h2>
+        <p id="rsvp-count">⭐ 3 people have RSVP'd to this event!</p>
+        <div class="rsvp-container">
+            <div class="rsvp-para">
+                <!-- info goes here -->
+                 <p> Welcome! Welcome! Please join us in an evening of games and get to know more about The STEM Sisterhood, our mission, and some tips for breaking into the tech industry. RSVP for The STEM Sisterhood's first Game Night!</p>
+            </div>
+            <div class="rsvp-participants">
+                <p>🎟️ Ayo from New Jersey has RSVP'd.</p>
+                <p>🎟️ De'Ani from California has RSVP'd.</p>
+                <p>🎟️ Sheridan from New Jersey has RSVP'd.</p>
+            </div>
+        </div>
+
+        <!--- Sign RSVP Form --->
+        <div class="form-container">
+            <form id="rsvp-form" title="rsvp-form">
+                <!-- form inputs go here -->
+                 <label for="name">Name:</label>
+                 <input id="name" type="text"> 
+                 <label for="email">Email:</label>
+                 <input id="email" type="text">
+                 <label for="phone">Phone Number:</label>
+                 <input id="phone" type="text">
+            </form>
+            <!-- Submit button -->
+             <button id="rsvp-button" type="submit">Submit RSVP</button>
+        </div>      
+    </div>
+        <!-- success modal [PLACEHOLDER] [ADDED IN UNIT 9] --> 
+
+        <!-- links
+
+        Purpose:
+        - Links to other resources related to the event
+
+        When To Modify:
+        - [ ] Project 2 (STRETCH FEATURE) 
+        - [ ] Project 4 (STRETCH FEATURE) 
+        - [ ] Any time between / after
+        --> 
+        <h2>Links<div id="links"></div></h2>
+        <h3>My Last Watched Youtube Video</h3>
+        <iframe src="https://www.youtube.com/embed/Ru_tv9_QoN0?si=jL-N0QWoYxTt6WOL">My favorite Youtuber of The Moment</iframe>
+        <h3>Video I want to Watch Next</h3>
+        <iframe src="https://www.youtube.com/embed/Ol18JoeXlVI?si=cQ1FZZy4pFl8Aj93">My favorite Youtuber of The Moment</iframe>
+
+
+        <!-- This <a> block is one link.  Copy and paste all 6 lines to create another link. -->
+        <a class="block" href="https://www.generation.org/news/women-in-tech-the-importance-of-gender-diversity-in-the-tech-industry/">
+
+            <article>
+                <h3>Women in Tech: The Importance of Gender Diversity in the Tech Industry</h3>
+                <p>This article examines the significance of gender diversity in the workplace, with a focus on the field of technology, and provide guidance for women looking to break into the world of tech.</p>
+            </article>
+        </a>
+            
+        <!-- footer [PLACEHOLDER] [ADDED IN UNIT 3] -->
+        <!-- script [PLACEHOLDER] [ADDED IN UNIT 5] -->
+        <div class="footer">
+            <a href="https://www.codepath.org">CodePath</a>
+            <a href="https://www.linkedin.com">Linkedin</a>
+
+
+    <script src="index.js"></script>
+    </body>
+     
+</div>
+</html>
