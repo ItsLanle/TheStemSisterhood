@@ -31,17 +31,10 @@ themeButton.addEventListener('click', toggleDarkMode);
 const rsvp = document.querySelector("#rsvp-button");
 let count = 3;
 
-const addParticipant = (event) => {
-    event.preventDefault();
-
-    // Get input values
-    const name = document.querySelector("#name").value;
-    const email = document.querySelector("#email").value;
-    const phone = document.querySelector("#phone").value;
-
+const addParticipant = (person) => {
     // Create new participant
     const newParticipant = document.createElement("p");
-    newParticipant.textContent = `🎟️ ${name} has RSVP'd! Email: ${email}, Phone: ${phone}`;
+    newParticipant.textContent = `🌱 ${person.name} has RSVP'd! Email: ${person.email}, Phone: ${person.phone}`;
 
     const participants = document.querySelector(".rsvp-participants");
     participants.appendChild(newParticipant);
@@ -93,9 +86,15 @@ const validateForm = (event) => {
     }
   }
 
-  // If valid → add participant + clear form
+  // If valid → create person object, add participant + clear form
   if (!containsErrors) {
-    addParticipant(event);
+    const person = {
+      name: document.querySelector("#name").value,
+      email: document.querySelector("#email").value,
+      phone: document.querySelector("#phone").value,
+    };
+
+    addParticipant(person);
 
     for (let i = 0; i < rsvpInputs.length; i++) {
       rsvpInputs[i].value = "";
