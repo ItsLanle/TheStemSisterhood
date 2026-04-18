@@ -95,6 +95,7 @@ const validateForm = (event) => {
     };
 
     addParticipant(person);
+    toggleModal(person);
 
     for (let i = 0; i < rsvpInputs.length; i++) {
       rsvpInputs[i].value = "";
@@ -193,4 +194,31 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll(".revealable").forEach(el => observer.observe(el));
 
 
-/*** Success Modal [PLACEHOLDER] [ADDED IN UNIT 9] ***/
+/*** Modal ***
+
+  Purpose:
+  - Use this starter code to add a pop-up modal to your website.
+
+  When To Modify:
+  - [ ] Project 9 (REQUIRED FEATURE)
+  - [ ] Project 9 (STRETCH FEATURE)
+  - [ ] Any time after
+***/
+
+const toggleModal = (person) => {
+    let modal = document.getElementById("success-modal");
+    let modalContent = document.getElementById("modal-text");
+
+    // Update modal display to flex
+    modal.style.display = "flex";
+
+    // Update modal text to personalized message
+    modalContent.textContent = `Thanks for RSVPing, ${person.name}! We can't wait to see you at the event! 🌱`;
+
+    // Set modal timeout to 5 seconds
+    setTimeout(() => {
+        modal.style.display = "none";
+    }, 5000);
+}
+
+// TODO: animation variables and animateImage() function
