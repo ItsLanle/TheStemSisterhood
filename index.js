@@ -34,7 +34,7 @@ let count = 3;
 const addParticipant = (person) => {
     // Create new participant
     const newParticipant = document.createElement("p");
-    newParticipant.textContent = `🌱 ${person.name} has RSVP'd! Email: ${person.email}, Phone: ${person.phone}`;
+    newParticipant.textContent = `🌱 ${person.name} has RSVP'd!`;
 
     const participants = document.querySelector(".rsvp-participants");
     participants.appendChild(newParticipant);
