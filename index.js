@@ -222,3 +222,13 @@ const toggleModal = (person) => {
 }
 
 // TODO: animation variables and animateImage() function
+let rotateFactor = 0;
+let modalImage = document.querySelector("#success-modal img");
+
+const animateImage = () => {
+    if (rotateFactor === 0) {
+        rotateFactor = -10;
+    } else {
+        rotateFactor = 0;
+    }
+};
