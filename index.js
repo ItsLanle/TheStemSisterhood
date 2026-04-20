@@ -215,9 +215,12 @@ const toggleModal = (person) => {
     // Update modal text to personalized message
     modalContent.textContent = `Thanks for RSVPing, ${person.name}! We can't wait to see you at the event! 🌱`;
 
+    let intervalId = setInterval(animateImage, 500);
+
     // Set modal timeout to 5 seconds
     setTimeout(() => {
         modal.style.display = "none";
+        clearInterval(intervalId);
     }, 5000);
 }
 
@@ -231,4 +234,5 @@ const animateImage = () => {
     } else {
         rotateFactor = 0;
     }
+    modalImage.style.transform = `rotate(${rotateFactor}deg)`;
 };
